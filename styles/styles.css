@@ -1,0 +1,405 @@
+:root {
+    --color-principal: #006F95;
+    --color-secundary: orange;
+    --color-terciary: #CE1E6C;
+    --color-call: #007bff;
+    --color-dark-grey: #737373;
+    --color-light-grey: #F6F6F6;
+}
+
+/* SCROLL */
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: #b3b3b3;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* /SCROLL */
+
+/* ICONOS */
+
+@font-face {
+    font-family: 'icomoon';
+    src: url('../assets/icons/icomoon.eot?flb6mo');
+    src: url('../assets/icons/icomoon.eot?flb6mo#iefix') format('embedded-opentype'), url('../assets/icons/icomoon.ttf?flb6mo') format('truetype'), url('../assets/icons/icomoon.woff?flb6mo') format('woff'), url('../assets/icons/icomoon.svg?flb6mo#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-phone:before {
+    content: "\e942";
+    color: black;
+}
+
+.icon-arrow-right:before {
+    font-size: 25px;
+    color: var(--color-principal);
+    content: "\ea3c";
+}
+
+.icon-mail:before {
+    content: "\ea86";
+}
+
+.icon-facebook:before {
+    content: "\ea91";
+    color: #3B60A6;
+    background: white;
+}
+
+.icon-instagram:before {
+    content: "\ea92";
+    color: #C42C65;
+}
+
+.icon-whatsapp:before {
+    content: "\ea93";
+    color: #00D424;
+}
+
+.icon-twitter:before {
+    content: "\ea96";
+    color: #65BBF2;
+}
+
+/* /ICONOS */
+
+/* ICONOS SERVICIOS */
+
+@font-face {
+    font-family: 'icomoon';
+    src: url('../assets/icon-services/icomoon.eot?qsp4y7');
+    src: url('../assets/icon-services/icomoon.eot?qsp4y7#iefix') format('embedded-opentype'), url('../assets/icon-services/icomoon.ttf?qsp4y7') format('truetype'), url('../assets/icon-services/icomoon.woff?qsp4y7') format('woff'), url('../assets/icon-services/icomoon.svg?qsp4y7#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-remodelaciones:before {
+    font-size: 35px;
+    color: var(--color-terciary);
+    content: "\e903";
+}
+
+.icon-disenio:before {
+    font-size: 35px;
+    color: var(--color-secundary);
+    content: "\e907";
+}
+
+.icon-pintura:before {
+    font-size: 35px;
+    color: var(--color-terciary);
+    content: "\e90c";
+}
+
+.icon-cubiertas:before {
+    font-size: 35px;
+    color: var(--color-terciary);
+    content: "\e921";
+}
+
+.icon-marco:before {
+    font-size: 35px;
+    color: var(--color-secundary);
+    content: "\e926";
+}
+
+.icon-suelos:before {
+    font-size: 35px;
+    color: var(--color-secundary);
+    content: "\e92e";
+}
+
+.icon-topografico:before {
+    font-size: 35px;
+    color: var(--color-secundary);
+    content: "\e94c";
+}
+
+.icon-preliminares:before {
+    font-size: 35px;
+    color: var(--color-secundary);
+    content: "\e975";
+}
+
+.icon-ejecucion:before {
+    font-size: 35px;
+    color: var(--color-secundary);
+    content: "\e996";
+}
+
+.icon-drywall:before {
+    font-size: 35px;
+    color: var(--color-terciary);
+    content: "\ea6e";
+}
+
+.icon-ventanas:before {
+    font-size: 35px;
+    color: var(--color-terciary);
+    content: "\eac2";
+}
+
+.icon-pisos:before {
+    font-size: 35px;
+    color: var(--color-terciary);
+    content: "\eacd";
+}
+
+/* /ICONOS SERVICIOS */
+
+nav .navbar-brand {
+    color: var(--color-dark-grey) !important;
+    font-weight: bolder;
+}
+
+.nav-item a {
+    color: var(--color-dark-grey);
+    font-weight: 500;
+}
+
+.nav-item a:hover {
+    color: var(--color-call);
+}
+
+#banners .carousel-inner .carousel-item {
+    width: 100%;
+    height: auto;
+}
+
+.services .title {
+    background: var(--color-principal);
+}
+
+.css-typing h1 {
+    border-right: .15em solid var(--color-secundary);
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 4vw;
+}
+
+/* WRITING ANIMATION */
+
+.css-typing h1:nth-child(1) {
+    width: 18em;
+    -webkit-animation: type 2s steps(40, end);
+    animation: type 2s steps(40, end);
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+.css-typing h1:nth-child(2) {
+    width: 12em;
+    opacity: 0;
+    -webkit-animation: type2 2s steps(40, end), blink .5s step-end infinite alternate;
+    animation: type2 2s steps(40, end), blink .5s step-end infinite alternate;
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@keyframes type {
+    0% {
+        width: 0;
+    }
+    99.9% {
+        border-right: .15em solid var(--color-secundary);
+    }
+    100% {
+        border: none;
+    }
+}
+
+@-webkit-keyframes type {
+    0% {
+        width: 0;
+    }
+    99.9% {
+        border-right: .15em solid var(--color-secundary);
+    }
+    100% {
+        border: none;
+    }
+}
+
+@keyframes type2 {
+    0% {
+        width: 0;
+    }
+    1% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes type2 {
+    0% {
+        width: 0;
+    }
+    1% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@-webkit-keyframes blink {
+    50% {
+        border-color: tranparent;
+    }
+}
+
+/* /WRITING ANIMATION */
+
+.services .title .container {
+    color: white;
+    font-weight: 100;
+}
+
+.services .title .container h1 {
+    font-weight: 300;
+}
+
+/* FADE IN */
+
+.card {
+    background-repeat: no-repeat;
+    background-position: left top;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* /FADE IN */
+
+.card {
+    background: var(--color-light-grey);
+    border: none;
+    border-radius: 2px;
+    font-weight: 300;
+    position: relative;
+    cursor: pointer;
+    transition: box-shadow .3s;
+    -webkit-transition: box-shadow .3s;
+}
+
+.card:hover {
+    box-shadow: 0 0 11px rgba(33, 33, 33, .2);
+}
+
+.card p {
+    text-align: justify;
+}
+
+.card span {
+    position: absolute;
+    bottom: 15px;
+    right: 20px;
+}
+
+.card h2 {
+    font-weight: 400;
+    font-size: 25px;
+}
+
+.title-clientes {
+    color: var(--color-dark-grey);
+}
+
+#clientes {
+    background: #FAFAFA;
+    height: 200px;
+}
+
+.contact iframe {
+    height: 1150;
+    width: 100%;
+    border: none;
+}
+
+footer {
+    position: relative;
+    background: #414141;
+    padding: 5% 0;
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+}
+
+footer a {
+    text-decoration: none;
+    color: inherit;
+}
+
+footer a:hover {
+    text-decoration: none;
+    color: inherit;
+}
