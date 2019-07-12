@@ -226,7 +226,7 @@ nav .navbar-brand {
 }
 
 .css-typing h1:nth-child(2) {
-    width: 12em;
+    width: 13em;
     opacity: 0;
     -webkit-animation: type2 2s steps(40, end), blink .5s step-end infinite alternate;
     animation: type2 2s steps(40, end), blink .5s step-end infinite alternate;
@@ -253,7 +253,7 @@ nav .navbar-brand {
         width: 0;
     }
     99.9% {
-        border-right: .17em solid var(--color-secundary);
+        border-right: .15em solid var(--color-secundary);
     }
     100% {
         border: none;
