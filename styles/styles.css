@@ -308,14 +308,13 @@ nav .navbar-brand {
 }
 
 .services-list .btn {
-    display: block;
-    background: var(--color-light-grey);
-    color: var(--color-dark-grey);
+    background: var(--color-dark-grey);
+    color: var(--color-light-grey);
 }
 
 .services-list .btn:hover {
-    background: var(--color-dark-grey);
-    color: var(--color-light-grey);
+    background: var(--color-light-grey);
+    color: var(--color-dark-grey);
 }
 
 /* FADE IN */
