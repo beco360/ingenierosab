@@ -307,6 +307,17 @@ nav .navbar-brand {
     font-weight: 300;
 }
 
+.services-list .btn {
+    display: block;
+    background: var(--color-light-grey);
+    color: var(--color-dark-grey);
+}
+
+.services-list .btn:hover {
+    background: var(--color-dark-grey);
+    color: var(--color-light-grey);
+}
+
 /* FADE IN */
 
 .card {

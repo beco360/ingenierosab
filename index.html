@@ -15,6 +15,7 @@
 </head>
 
 <body>
+    <!-- HEADER -->
     <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light py-3">
         <a class="navbar-brand" href="#">
             <img src="./assets/brand/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
@@ -46,7 +47,9 @@
             </ul>
         </div>
     </nav>
+    <!-- /HEADER -->
 
+    <!-- SECCION DE BANNERS -->
     <div id="banners" class="carousel slide carousel-fade" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
@@ -57,8 +60,10 @@
             </div>
         </div>
     </div>
+    <!-- /SECCION DE BANNERS -->
 
     <div class="services" id="servicios">
+        <!-- SLOGAN -->
         <div class="title mb-4">
             <div class="container py-5">
                 <div class="css-typing">
@@ -67,117 +72,160 @@
                 </div>
             </div>
         </div>
+        <!-- /SLOGAN -->
+
+        <!-- SECCION DE SERVICIOS -->
         <div class="services-list">
+            <button class="btn btn-block btn-lg mb-2 p-4" type="button" data-toggle="collapse"
+                data-target="#collapseObra" aria-expanded="false" aria-controls="collapseObra">
+                Ver nuestros servicios de obra
+                <img src="./assets/icons/chevron-down.svg" alt="V">
+            </button>
             <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-12 col-lg-3 card my-3 mx-2 py-4"
-                        onclick="location.href='servicios/marco-normativo.html'">
-                        <i class="icon-marco my-3"></i>
-                        <h2 class="py-2">Marco normativo</h2>
-                        <p>Ofrecemos acompañamientos en todos los tramites de Licencias de construcción, Licencias
-                            ambientales, Supervisión de ejecución de obras y demas procesos que su empresa necesite</p>
-                        <span class="icon-arrow-right"></span>
+                <!-- SECCION DE OBRA -->
+                <div class="collapse" id="collapseObra">
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-lg-3 card my-3 mx-2 py-4"
+                            onclick="location.href='servicios/marco-normativo.html'">
+                            <i class="icon-marco my-3"></i>
+                            <h2 class="py-2">Marco normativo</h2>
+                            <p>Ofrecemos acompañamientos en todos los tramites de Licencias de construcción, Licencias
+                                ambientales, Supervisión de ejecución de obras y demas procesos que su empresa necesite
+                            </p>
+                            <span class="icon-arrow-right"></span>
+                        </div>
+                        <div class="col-12 col-lg-3 card my-3 mx-2 py-4"
+                            onclick="location.href='servicios/diseños-obra.html'">
+                            <i class="icon-disenio my-3"></i>
+                            <h2 class="py-2">Diseños de obra</h2>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque perferendis quae
+                                voluptates.
+                                Quibusdam repudiandae ab laborum nisi voluptas recusandae facilis vel eveniet dolores.
+                            </p>
+                            <span class="icon-arrow-right"></span>
+                        </div>
+                        <div class="col-12 col-lg-3 card my-3 mx-2 py-4"
+                            onclick="location.href='servicios/estudio-suelos.html'">
+                            <i class="icon-suelos my-3"></i>
+                            <h2 class="py-2">Estudio de suelos</h2>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque perferendis quae
+                                voluptates.
+                                Quibusdam repudiandae ab laborum nisi voluptas recusandae facilis vel eveniet dolores.
+                            </p>
+                            <span class="icon-arrow-right"></span>
+                        </div>
                     </div>
-                    <div class="col-12 col-lg-3 card my-3 mx-2 py-4"
-                        onclick="location.href='servicios/diseños-obra.html'">
-                        <i class="icon-disenio my-3"></i>
-                        <h2 class="py-2">Diseños de obra</h2>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque perferendis quae voluptates.
-                            Quibusdam repudiandae ab laborum nisi voluptas recusandae facilis vel eveniet dolores.</p>
-                        <span class="icon-arrow-right"></span>
-                    </div>
-                    <div class="col-12 col-lg-3 card my-3 mx-2 py-4"
-                        onclick="location.href='servicios/estudio-suelos.html'">
-                        <i class="icon-suelos my-3"></i>
-                        <h2 class="py-2">Estudio de suelos</h2>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque perferendis quae voluptates.
-                            Quibusdam repudiandae ab laborum nisi voluptas recusandae facilis vel eveniet dolores.</p>
-                        <span class="icon-arrow-right"></span>
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-lg-3 card my-3 mx-2 py-4"
+                            onclick="location.href='servicios/levantamiento-topografico.html'">
+                            <i class="icon-topografico my-3"></i>
+                            <h2 class="py-2">Levantamiento topografico</h2>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque perferendis quae
+                                voluptates.
+                                Quibusdam repudiandae ab laborum nisi voluptas recusandae facilis vel eveniet dolores.
+                            </p>
+                            <span class="icon-arrow-right"></span>
+                        </div>
+                        <div class="col-12 col-lg-3 card my-3 mx-2 py-4"
+                            onclick="location.href='servicios/preliminares-obra.html'">
+                            <i class="icon-preliminares my-3"></i>
+                            <h2 class="py-2">Preliminares de obra</h2>
+                            <p>Ofrecemos acompañamientos en todos los tramites de Licencias de construcción, Licencias
+                                ambientales, Supervisión de ejecución de obras y demas procesos que su empresa necesite
+                            </p>
+                            <span class="icon-arrow-right"></span>
+                        </div>
+                        <div class="col-12 col-lg-3 card my-3 mx-2 py-4"
+                            onclick="location.href='servicios/ejecucion.html'">
+                            <i class="icon-ejecucion my-3"></i>
+                            <h2 class="py-2">Ejecución, Vias y Obra vertical</h2>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque perferendis quae
+                                voluptates.
+                                Quibusdam repudiandae ab laborum nisi voluptas recusandae facilis vel eveniet dolores.
+                            </p>
+                            <span class="icon-arrow-right"></span>
+                        </div>
                     </div>
                 </div>
-                <div class="row justify-content-center">
-                    <div class="col-12 col-lg-3 card my-3 mx-2 py-4"
-                        onclick="location.href='servicios/levantamiento-topografico.html'">
-                        <i class="icon-topografico my-3"></i>
-                        <h2 class="py-2">Levantamiento topografico</h2>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque perferendis quae voluptates.
-                            Quibusdam repudiandae ab laborum nisi voluptas recusandae facilis vel eveniet dolores.</p>
-                        <span class="icon-arrow-right"></span>
+                <!-- /SECCION DE OBRA -->
+            </div>
+            <button class="btn btn-block btn-lg p-4 mb-4" type="button" data-toggle="collapse"
+                data-target="#collapseAcabados" aria-expanded="false" aria-controls="collapseAcabados">
+                Ver nuestros servicios de acabados
+                <img src="./assets/icons/chevron-down.svg" alt="V">
+            </button>
+            <div class="container">
+                <!-- SECCION DE ACABADOS -->
+                <div class="collapse" id="collapseAcabados">
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-lg-3 card my-3 mx-2 py-4" onclick="location.href='servicios/pisos.html'">
+                            <i class="icon-pisos my-3"></i>
+                            <h2 class="py-2">Enchapes, pisos laminados y en madera</h2>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque perferendis quae
+                                voluptates.
+                                Quibusdam repudiandae ab laborum nisi voluptas recusandae facilis vel eveniet dolores.
+                            </p>
+                            <span class="icon-arrow-right"></span>
+                        </div>
+                        <div class="col-12 col-lg-3 card my-3 mx-2 py-4"
+                            onclick="location.href='servicios/estuco-pintura.html'">
+                            <i class="icon-pintura my-3"></i>
+                            <h2 class="py-2">Estuco y Pintura</h2>
+                            <p>Ofrecemos acompañamientos en todos los tramites de Licencias de construcción, Licencias
+                                ambientales, Supervisión de ejecución de obras y demas procesos que su empresa necesite
+                            </p>
+                            <span class="icon-arrow-right"></span>
+                        </div>
+                        <div class="col-12 col-lg-3 card my-3 mx-2 py-4"
+                            onclick="location.href='servicios/drywall-superboard.html'">
+                            <i class="icon-drywall my-3"></i>
+                            <h2 class="py-2">Drywall y Superboard</h2>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque perferendis quae
+                                voluptates.
+                                Quibusdam repudiandae ab laborum nisi voluptas recusandae facilis vel eveniet dolores.
+                            </p>
+                            <span class="icon-arrow-right"></span>
+                        </div>
                     </div>
-                    <div class="col-12 col-lg-3 card my-3 mx-2 py-4"
-                        onclick="location.href='servicios/preliminares-obra.html'">
-                        <i class="icon-preliminares my-3"></i>
-                        <h2 class="py-2">Preliminares de obra</h2>
-                        <p>Ofrecemos acompañamientos en todos los tramites de Licencias de construcción, Licencias
-                            ambientales, Supervisión de ejecución de obras y demas procesos que su empresa necesite</p>
-                        <span class="icon-arrow-right"></span>
-                    </div>
-                    <div class="col-12 col-lg-3 card my-3 mx-2 py-4"
-                        onclick="location.href='servicios/ejecucion.html'">
-                        <i class="icon-ejecucion my-3"></i>
-                        <h2 class="py-2">Ejecución, Vias y Obra vertical</h2>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque perferendis quae voluptates.
-                            Quibusdam repudiandae ab laborum nisi voluptas recusandae facilis vel eveniet dolores.</p>
-                        <span class="icon-arrow-right"></span>
-                    </div>
-                </div>
 
-                <div class="row justify-content-center">
-                    <div class="col-12 col-lg-3 card my-3 mx-2 py-4"
-                        onclick="location.href='servicios/pisos.html'">
-                        <i class="icon-pisos my-3"></i>
-                        <h2 class="py-2">Enchapes, pisos laminados y en madera</h2>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque perferendis quae voluptates.
-                            Quibusdam repudiandae ab laborum nisi voluptas recusandae facilis vel eveniet dolores.</p>
-                        <span class="icon-arrow-right"></span>
-                    </div>
-                    <div class="col-12 col-lg-3 card my-3 mx-2 py-4"
-                        onclick="location.href='servicios/estuco-pintura.html'">
-                        <i class="icon-pintura my-3"></i>
-                        <h2 class="py-2">Estuco y Pintura</h2>
-                        <p>Ofrecemos acompañamientos en todos los tramites de Licencias de construcción, Licencias
-                            ambientales, Supervisión de ejecución de obras y demas procesos que su empresa necesite</p>
-                        <span class="icon-arrow-right"></span>
-                    </div>
-                    <div class="col-12 col-lg-3 card my-3 mx-2 py-4"
-                        onclick="location.href='servicios/drywall-superboard.html'">
-                        <i class="icon-drywall my-3"></i>
-                        <h2 class="py-2">Drywall y Superboard</h2>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque perferendis quae voluptates.
-                            Quibusdam repudiandae ab laborum nisi voluptas recusandae facilis vel eveniet dolores.</p>
-                        <span class="icon-arrow-right"></span>
-                    </div>
-                </div>
-
-                <div class="row justify-content-center">
-                    <div class="col-12 col-lg-3 card my-3 mx-2 py-4"
-                        onclick="location.href='servicios/ventaneria.html'">
-                        <i class="icon-ventanas my-3"></i>
-                        <h2 class="py-2">Ventaneria en aluminio y Divisiones de vidrio</h2>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque perferendis quae voluptates.
-                            Quibusdam repudiandae ab laborum nisi voluptas recusandae facilis vel eveniet dolores.</p>
-                        <span class="icon-arrow-right"></span>
-                    </div>
-                    <div class="col-12 col-lg-3 card my-3 mx-2 py-4"
-                        onclick="location.href='servicios/cubiertas.html'">
-                        <i class="icon-cubiertas my-3"></i>
-                        <h2 class="py-2">Cubiertas</h2>
-                        <p>Ofrecemos acompañamientos en todos los tramites de Licencias de construcción, Licencias
-                            ambientales, Supervisión de ejecución de obras y demas procesos que su empresa necesite</p>
-                        <span class="icon-arrow-right"></span>
-                    </div>
-                    <div class="col-12 col-lg-3 card my-3 mx-2 py-4"
-                        onclick="location.href='servicios/remodelaciones.html'">
-                        <i class="icon-remodelaciones my-3"></i>
-                        <h2 class="py-2">Remodelaciones en general</h2>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque perferendis quae voluptates.
-                            Quibusdam repudiandae ab laborum nisi voluptas recusandae facilis vel eveniet dolores.</p>
-                        <span class="icon-arrow-right"></span>
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-lg-3 card my-3 mx-2 py-4"
+                            onclick="location.href='servicios/ventaneria.html'">
+                            <i class="icon-ventanas my-3"></i>
+                            <h2 class="py-2">Ventaneria en aluminio y Divisiones de vidrio</h2>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque perferendis quae
+                                voluptates.
+                                Quibusdam repudiandae ab laborum nisi voluptas recusandae facilis vel eveniet dolores.
+                            </p>
+                            <span class="icon-arrow-right"></span>
+                        </div>
+                        <div class="col-12 col-lg-3 card my-3 mx-2 py-4"
+                            onclick="location.href='servicios/cubiertas.html'">
+                            <i class="icon-cubiertas my-3"></i>
+                            <h2 class="py-2">Cubiertas</h2>
+                            <p>Ofrecemos acompañamientos en todos los tramites de Licencias de construcción, Licencias
+                                ambientales, Supervisión de ejecución de obras y demas procesos que su empresa necesite
+                            </p>
+                            <span class="icon-arrow-right"></span>
+                        </div>
+                        <div class="col-12 col-lg-3 card my-3 mx-2 py-4"
+                            onclick="location.href='servicios/remodelaciones.html'">
+                            <i class="icon-remodelaciones my-3"></i>
+                            <h2 class="py-2">Remodelaciones en general</h2>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque perferendis quae
+                                voluptates.
+                                Quibusdam repudiandae ab laborum nisi voluptas recusandae facilis vel eveniet dolores.
+                            </p>
+                            <span class="icon-arrow-right"></span>
+                        </div>
                     </div>
                 </div>
+                <!-- /SECCION DE ACABADOS -->
             </div>
         </div>
+        <!-- /SECCION DE SERVICIOS -->
     </div>
+    <!-- SECCION DE CLIENTES -->
     <h2 class="title-clientes text-center mb-4"><small>Nuestros Clientes</small></h2>
     <div id="clientes" class="carousel slide py-3 mb-4" data-ride="carousel" data-pause="false">
         <div class="carousel-inner">
@@ -215,14 +263,14 @@
             </div>
         </div>
     </div>
+    <!-- /SECCION DE CLIENTES -->
 
+    <!-- SECCION DE CONTACTO -->
     <div class="contact text-center" id="contacto">
         <iframe
             src="https://docs.google.com/forms/d/e/1FAIpQLSes1MJ_SkP1xrAdW0pBjSpguHzX8lnOhmjEkcDNXrRmug33GQ/viewform?embedded=true"
             width="760" height="1100" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
     </div>
-
-
 
     <footer class="footer shadow-sm mt-4">
         <div class="container-fluid">
@@ -253,6 +301,7 @@
             </div>
         </div>
     </footer>
+    <!-- /SECCION DE CONTACTO -->
 
     <script src="./scripts/index.js"></script>
 
