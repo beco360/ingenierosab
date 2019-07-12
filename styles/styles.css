@@ -253,7 +253,7 @@ nav .navbar-brand {
         width: 0;
     }
     99.9% {
-        border-right: .15em solid var(--color-secundary);
+        border-right: .17em solid var(--color-secundary);
     }
     100% {
         border: none;
@@ -376,7 +376,12 @@ nav .navbar-brand {
 
 #clientes {
     background: #FAFAFA;
-    height: 200px;
+    height: auto;
+}
+
+#clientes img {
+    width: 15vw;
+    height: auto;
 }
 
 .contact iframe {
