@@ -5,6 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/brand/favicon.ico" />
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -14,22 +15,22 @@
     <title>Ingenieros AB</title>
 </head>
 
-<body data-spy="scroll" data-target="#navbar">
+<body data-spy="scroll" data-target="#navbar" data-offset="80">
     <!-- HEADER -->
     <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light py-3">
         <a class="navbar-brand" href="#">
             <img src="./assets/brand/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
             Ingenieros AB
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar"
-            aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar"
+            aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <nav class="collapse navbar-collapse" id="navbar ">
+        <nav class="collapse navbar-collapse" id="navbar">
             <ul class="navbar-nav ml-auto mt-2 mt-lg-0 text-center">
                 <li class="nav-item ml-3">
-                    <a class="nav-link" href="#">Inicio</a>
+                    <a class="nav-link" href="#inicio">Inicio</a>
                 </li>
                 <li class="nav-item ml-3">
                     <a class="nav-link" href="#servicios">Servicios</a>
@@ -43,14 +44,15 @@
                 <li class="nav-item ml-3">
                     <a class="nav-link" href="proyectos.html">Proyectos</a>
                 </li>
-                <a href="#contacto" class="btn btn-primary mr-3 ml-3">CONTÁCTENOS</a>
+                <button type="button" class="btn btn-primary mr-3 ml-3" data-toggle="modal"
+                    data-target="#contact">CONTÁCTENOS</button>
             </ul>
         </nav>
     </nav>
     <!-- /HEADER -->
 
     <!-- SECCION DE BANNERS -->
-    <div id="banners" class="carousel slide carousel-fade" data-ride="carousel">
+    <div id="inicio" class="carousel slide carousel-fade" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img src="./assets/brand/banner1.jpg" class="d-block w-100" alt="...">
@@ -236,28 +238,28 @@
                         <h5><small>Claro</small></h5>
                     </div>
                     <div class="col text-center">
-                        <img src="./clientes/falabella.png" alt="Falabella">
-                        <h5><small>Falabella</small></h5>
+                        <img src="./clientes/cencosud.png" alt="Cencosud">
+                        <h5><small>Cencosud</small></h5>
                     </div>
                     <div class="col text-center">
-                        <img src="./clientes/bavaria.png" alt="Bavaria">
-                        <h5><small>Bavaria</small></h5>
+                        <img src="./clientes/acueducto.png" alt="Acueducto">
+                        <h5><small>Acueducto</small></h5>
                     </div>
                 </div>
             </div>
             <div class="carousel-item" data-interval="3000">
                 <div class="row">
                     <div class="col text-center">
-                        <img src="./clientes/movistar.png" alt="Movistar">
-                        <h5><small>Movistar</small></h5>
+                        <img src="./clientes/inamsilco.png" alt="Inamsilco">
+                        <h5><small>Inamsilco</small></h5>
                     </div>
                     <div class="col text-center">
-                        <img src="./clientes/sura.png" alt="Sura">
-                        <h5><small>Sura</small></h5>
+                        <img src="./clientes/olimpica.png" alt="Olimpica">
+                        <h5><small>Olimpica</small></h5>
                     </div>
                     <div class="col text-center">
-                        <img src="./clientes/claro.png" alt="Claro">
-                        <h5><small>Claro</small></h5>
+                        <img src="./clientes/jumbo.png" alt="Jumbo">
+                        <h5><small>Jumbo</small></h5>
                     </div>
                 </div>
             </div>
@@ -266,42 +268,70 @@
     <!-- /SECCION DE CLIENTES -->
 
     <!-- SECCION DE CONTACTO -->
-    <div class="contact text-center" id="contacto">
-        <iframe
-            src="https://docs.google.com/forms/d/e/1FAIpQLSes1MJ_SkP1xrAdW0pBjSpguHzX8lnOhmjEkcDNXrRmug33GQ/viewform?embedded=true"
-            width="760" height="1100" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
-    </div>
-
-    <footer class="footer shadow-sm mt-4">
+    <footer id="footer" class="footer shadow-sm mt-4">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12 col-md-6 footer-contact">
                     <h2>Contacto directo</h2>
                     <br>
-                    <a href="mailto:santiagoemp01@gmail.com"><i class="icon-mail"> </i>team@ingenierosab.com</a>
+                    <a href="mailto:ingenierosabsas@gmail.com"><i class="icon-mail"> </i>ingenierosabsas@gmail.com</a>
                     <br>
-                    <a href="https://wa.me/573508108761" target="_blank"><i class="icon-whatsapp"> </i>+57 310
-                        123000</a>
+                    <a href="https://wa.me/573102818115" target="_blank"><i class="icon-whatsapp"> </i>+57 310
+                        2818115</a>
                     <br>
-                    <a href="tel:+573508108761"><i class="icon-phone"> </i>+57 310
-                        123000</a>
+                    <a href="tel:+573102818115"><i class="icon-phone"> </i>+57 310
+                        2818115</a>
                 </div>
                 <div class="col-12 col-md-6 footer-social">
                     <h2>Conoce más sobre nosotros</h2>
                     <br>
-                    <a href="facebook.com/ingenierosab" target="_blank"><i class="icon-facebook">
+                    <a href="https://www.facebook.com/ingenierosab" target="_blank"><i class="icon-facebook">
                         </i>facebook.com/ingenierosab</a>
                     <br>
-                    <a href="instagram.com/ingenierosab" target="_blank"><i class="icon-instagram">
+                    <a href="https://www.instagram.com/ingenierosab" target="_blank"><i class="icon-instagram">
                         </i>instagram.com/ingenierosab</a>
                     <br>
-                    <a href="twitter.com/ingenierosab" target="_blank"><i class="icon-twitter">
+                    <a href="https://www.twitter.com/ingenierosab" target="_blank"><i class="icon-twitter">
                         </i>twitter.com/ingenierosab </a>
                 </div>
             </div>
         </div>
     </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="contact" tabindex="-1" role="dialog" aria-labelledby="modalConactTitle"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" aria-label="Close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <iframe
+                        data-src="https://docs.google.com/forms/d/e/1FAIpQLSes1MJ_SkP1xrAdW0pBjSpguHzX8lnOhmjEkcDNXrRmug33GQ/viewform?embedded=true"
+                        frameborder="0" marginheight="0" marginwidth="0" class="w-100 lozad"
+                        style="height: 55vh;">Cargando…</iframe>
+                </div>
+                <div class="modal-footer">
+                    <p class="lead text-center">Para ver nuestros datos de contacto y medios de difusión, da
+                        <a href="https://www.ingenierosab.com/index.html#footer">click aquí</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <!-- /SECCION DE CONTACTO -->
+
+    <!-- LOZAD -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+    <script>
+        const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+        observer.observe();
+    </script>
+    <!-- /LOZAD -->
 
     <script src="./scripts/index.js"></script>
 
