@@ -218,7 +218,7 @@ nav .navbar-brand {
 /* WRITING ANIMATION */
 
 .css-typing h1:nth-child(1) {
-    width: 18em;
+    width: 15em;
     -webkit-animation: type 2s steps(40, end);
     animation: type 2s steps(40, end);
     -webkit-animation-fill-mode: forwards;
@@ -226,7 +226,7 @@ nav .navbar-brand {
 }
 
 .css-typing h1:nth-child(2) {
-    width: 13em;
+    width: 16.5em;
     opacity: 0;
     -webkit-animation: type2 2s steps(40, end), blink .5s step-end infinite alternate;
     animation: type2 2s steps(40, end), blink .5s step-end infinite alternate;
@@ -298,12 +298,13 @@ nav .navbar-brand {
 
 /* /WRITING ANIMATION */
 
-.services .title .container {
+.services .title .container-fluid {
     color: white;
     font-weight: 100;
+    padding-left: 3vw;
 }
 
-.services .title .container h1 {
+.services .title .container-fluid h1 {
     font-weight: 300;
 }
 
