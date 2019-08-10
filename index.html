@@ -5,6 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/brand/favicon.ico" />
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -14,22 +15,22 @@
     <title>Ingenieros AB</title>
 </head>
 
-<body>
+<body data-spy="scroll" data-target="#navbar" data-offset="80">
     <!-- HEADER -->
     <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light py-3">
         <a class="navbar-brand" href="#">
             <img src="./assets/brand/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
             Ingenieros AB
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
-            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar"
+            aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <nav class="collapse navbar-collapse" id="navbar">
             <ul class="navbar-nav ml-auto mt-2 mt-lg-0 text-center">
                 <li class="nav-item ml-3">
-                    <a class="nav-link" href="#">Inicio</a>
+                    <a class="nav-link" href="#inicio">Inicio</a>
                 </li>
                 <li class="nav-item ml-3">
                     <a class="nav-link" href="#servicios">Servicios</a>
@@ -43,20 +44,21 @@
                 <li class="nav-item ml-3">
                     <a class="nav-link" href="proyectos.html">Proyectos</a>
                 </li>
-                <a href="#contacto" class="btn btn-primary mr-3 ml-3">CONTÁCTENOS</a>
+                <button type="button" class="btn btn-primary mr-3 ml-3" data-toggle="modal"
+                    data-target="#contact">CONTÁCTENOS</button>
             </ul>
-        </div>
+        </nav>
     </nav>
     <!-- /HEADER -->
 
     <!-- SECCION DE BANNERS -->
-    <div id="banners" class="carousel slide carousel-fade" data-ride="carousel">
+    <div id="inicio" class="carousel slide carousel-fade" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="./assets/brand/banner1.jpg" class="d-block w-100" alt="...">
+                <img src="./assets/brand/banner1.webp" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-                <img src="./assets/brand/banner1.jpg" class="d-block w-100" alt="...">
+                <img src="./assets/brand/banner1.webp" class="d-block w-100" alt="...">
             </div>
         </div>
     </div>
@@ -65,7 +67,7 @@
     <div class="services" id="servicios">
         <!-- SLOGAN -->
         <div class="title mb-4">
-            <div class="container py-5">
+            <div class="container py-3">
                 <div class="css-typing">
                     <h1>En Ingenieros AB sus deseos son nuestra </h1>
                     <h1>inspiración de construcción.</h1>
@@ -90,7 +92,7 @@
                             <i class="icon-marco my-3"></i>
                             <h2 class="py-2">Marco normativo</h2>
                             <p>Ofrecemos acompañamientos en todos los tramites de Licencias de construcción, Licencias
-                                ambientales, Supervisión de ejecución de obras y demas procesos que su empresa necesite
+                                ambientales, Supervisión de ejecución de obras y demas procesos que su empresa necesite.
                             </p>
                             <span class="icon-arrow-right"></span>
                         </div>
@@ -98,9 +100,8 @@
                             onclick="location.href='servicios/diseños-obra.html'">
                             <i class="icon-disenio my-3"></i>
                             <h2 class="py-2">Diseños de obra</h2>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque perferendis quae
-                                voluptates.
-                                Quibusdam repudiandae ab laborum nisi voluptas recusandae facilis vel eveniet dolores.
+                            <p>Apoyamos y realizamos el conjunto de documentos mediante los cuales se define el diseño
+                                de una construcción antes de ser realizada.
                             </p>
                             <span class="icon-arrow-right"></span>
                         </div>
@@ -108,9 +109,8 @@
                             onclick="location.href='servicios/estudio-suelos.html'">
                             <i class="icon-suelos my-3"></i>
                             <h2 class="py-2">Estudio de suelos</h2>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque perferendis quae
-                                voluptates.
-                                Quibusdam repudiandae ab laborum nisi voluptas recusandae facilis vel eveniet dolores.
+                            <p>Te ayudamos a conocer las características físicas y mecánicas del
+                                suelo, es decir, la composición de las capas de terreno en la profundidad.
                             </p>
                             <span class="icon-arrow-right"></span>
                         </div>
@@ -119,10 +119,11 @@
                         <div class="col-12 col-lg-3 card my-3 mx-2 py-4"
                             onclick="location.href='servicios/levantamiento-topografico.html'">
                             <i class="icon-topografico my-3"></i>
-                            <h2 class="py-2">Levantamiento topografico</h2>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque perferendis quae
-                                voluptates.
-                                Quibusdam repudiandae ab laborum nisi voluptas recusandae facilis vel eveniet dolores.
+                            <h2 class="py-2">Levantamiento topográfico</h2>
+                            <p>Realizamos estudios técnicos y descriptivos de un terreno,
+                                examinando la superficie terrestre en la cual se tienen en cuenta las características
+                                físicas, geográficas y geológicas del terreno, pero también sus variaciones y
+                                alteraciones.
                             </p>
                             <span class="icon-arrow-right"></span>
                         </div>
@@ -130,18 +131,19 @@
                             onclick="location.href='servicios/preliminares-obra.html'">
                             <i class="icon-preliminares my-3"></i>
                             <h2 class="py-2">Preliminares de obra</h2>
-                            <p>Ofrecemos acompañamientos en todos los tramites de Licencias de construcción, Licencias
-                                ambientales, Supervisión de ejecución de obras y demas procesos que su empresa necesite
+                            <p>
+                                Te apoyamos con todas las actividades de adecuación del lote donde se va edificar y
+                                a definir la ubicación exacta de las obras en el terreno.
                             </p>
                             <span class="icon-arrow-right"></span>
                         </div>
                         <div class="col-12 col-lg-3 card my-3 mx-2 py-4"
                             onclick="location.href='servicios/ejecucion.html'">
                             <i class="icon-ejecucion my-3"></i>
-                            <h2 class="py-2">Ejecución, Vias y Obra vertical</h2>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque perferendis quae
-                                voluptates.
-                                Quibusdam repudiandae ab laborum nisi voluptas recusandae facilis vel eveniet dolores.
+                            <h2 class="py-2">Ejecución, Vías y Obra vertical</h2>
+                            <p>
+                                Tenemos cobertura en casi todas las áreas de ejecución. Construimos todo tipo de vías y
+                                obras verticales.
                             </p>
                             <span class="icon-arrow-right"></span>
                         </div>
@@ -161,9 +163,10 @@
                         <div class="col-12 col-lg-3 card my-3 mx-2 py-4" onclick="location.href='servicios/pisos.html'">
                             <i class="icon-pisos my-3"></i>
                             <h2 class="py-2">Enchapes, pisos laminados y en madera</h2>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque perferendis quae
-                                voluptates.
-                                Quibusdam repudiandae ab laborum nisi voluptas recusandae facilis vel eveniet dolores.
+                            <p>
+                                No solo basta con que tengas el mejor piso, si no se adecua e instala correctamente, su
+                                calidad y aspecto visual bajaran considerablemente. Nosotros sabemos esto y por eso
+                                nuestras instalaciones son impecables.
                             </p>
                             <span class="icon-arrow-right"></span>
                         </div>
@@ -171,8 +174,11 @@
                             onclick="location.href='servicios/estuco-pintura.html'">
                             <i class="icon-pintura my-3"></i>
                             <h2 class="py-2">Estuco y Pintura</h2>
-                            <p>Ofrecemos acompañamientos en todos los tramites de Licencias de construcción, Licencias
-                                ambientales, Supervisión de ejecución de obras y demas procesos que su empresa necesite
+                            <p>
+                                El estuco y la pintura son dos aspecto fundamentales para cualquier espacio, por tal
+                                razón el impacto que generan es algo que no se deba
+                                tomar a la ligera. Deja que nuestro equipo de expertos se encarguen de esto y obtengas
+                                resultados espectaculares.
                             </p>
                             <span class="icon-arrow-right"></span>
                         </div>
@@ -180,9 +186,10 @@
                             onclick="location.href='servicios/drywall-superboard.html'">
                             <i class="icon-drywall my-3"></i>
                             <h2 class="py-2">Drywall y Superboard</h2>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque perferendis quae
-                                voluptates.
-                                Quibusdam repudiandae ab laborum nisi voluptas recusandae facilis vel eveniet dolores.
+                            <p>
+                                Realizamos todo tipo de adecuaciones y instalaciones en drywall y superboard. recuerda
+                                que puedes decorar y distribuir como plazcas el espacio seleccionado. De nuestra mano
+                                conocerás el poder de estos materiales y los beneficios que representan.
                             </p>
                             <span class="icon-arrow-right"></span>
                         </div>
@@ -192,10 +199,10 @@
                         <div class="col-12 col-lg-3 card my-3 mx-2 py-4"
                             onclick="location.href='servicios/ventaneria.html'">
                             <i class="icon-ventanas my-3"></i>
-                            <h2 class="py-2">Ventaneria en aluminio y Divisiones de vidrio</h2>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque perferendis quae
-                                voluptates.
-                                Quibusdam repudiandae ab laborum nisi voluptas recusandae facilis vel eveniet dolores.
+                            <h2 class="py-2">Ventanería en aluminio y Divisiones de vidrio</h2>
+                            <p>
+                                Con nosotros puedes diseñar las ventanas y divisiones a tu medida y a tu gusto y
+                                recuerda, en ingenieros AB siempre usamos los mejores materiales de construcción.
                             </p>
                             <span class="icon-arrow-right"></span>
                         </div>
@@ -203,8 +210,10 @@
                             onclick="location.href='servicios/cubiertas.html'">
                             <i class="icon-cubiertas my-3"></i>
                             <h2 class="py-2">Cubiertas</h2>
-                            <p>Ofrecemos acompañamientos en todos los tramites de Licencias de construcción, Licencias
-                                ambientales, Supervisión de ejecución de obras y demas procesos que su empresa necesite
+                            <p>
+                                Para proteger el interior de tu inmueble o evento, debes tener la mejor cubierta
+                                posible. Nosotros te apoyamos en esto y por tal razón construimos cubiertas y techumbres
+                                de la mejor calidad, evitando así filtraciones o inconvenientes en general.
                             </p>
                             <span class="icon-arrow-right"></span>
                         </div>
@@ -212,9 +221,9 @@
                             onclick="location.href='servicios/remodelaciones.html'">
                             <i class="icon-remodelaciones my-3"></i>
                             <h2 class="py-2">Remodelaciones en general</h2>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque perferendis quae
-                                voluptates.
-                                Quibusdam repudiandae ab laborum nisi voluptas recusandae facilis vel eveniet dolores.
+                            <p>
+                                Realizamos todo tipo de remodelaciones y adecuaciones, que esperas para convertir tu
+                                espacio en un paraíso, eso si, todo a tu gusto y presupuesto.
                             </p>
                             <span class="icon-arrow-right"></span>
                         </div>
@@ -236,28 +245,28 @@
                         <h5><small>Claro</small></h5>
                     </div>
                     <div class="col text-center">
-                        <img src="./clientes/falabella.png" alt="Falabella">
-                        <h5><small>Falabella</small></h5>
+                        <img src="./clientes/cencosud.png" alt="Cencosud">
+                        <h5><small>Cencosud</small></h5>
                     </div>
                     <div class="col text-center">
-                        <img src="./clientes/bavaria.png" alt="Bavaria">
-                        <h5><small>Bavaria</small></h5>
+                        <img src="./clientes/acueducto.png" alt="Acueducto">
+                        <h5><small>Acueducto</small></h5>
                     </div>
                 </div>
             </div>
             <div class="carousel-item" data-interval="3000">
                 <div class="row">
                     <div class="col text-center">
-                        <img src="./clientes/movistar.png" alt="Movistar">
-                        <h5><small>Movistar</small></h5>
+                        <img src="./clientes/inamsilco.png" alt="Inamsilco">
+                        <h5><small>Inamsilco</small></h5>
                     </div>
                     <div class="col text-center">
-                        <img src="./clientes/sura.png" alt="Sura">
-                        <h5><small>Sura</small></h5>
+                        <img src="./clientes/olimpica.png" alt="Olimpica">
+                        <h5><small>Olimpica</small></h5>
                     </div>
                     <div class="col text-center">
-                        <img src="./clientes/claro.png" alt="Claro">
-                        <h5><small>Claro</small></h5>
+                        <img src="./clientes/jumbo.png" alt="Jumbo">
+                        <h5><small>Jumbo</small></h5>
                     </div>
                 </div>
             </div>
@@ -266,42 +275,70 @@
     <!-- /SECCION DE CLIENTES -->
 
     <!-- SECCION DE CONTACTO -->
-    <div class="contact text-center" id="contacto">
-        <iframe
-            src="https://docs.google.com/forms/d/e/1FAIpQLSes1MJ_SkP1xrAdW0pBjSpguHzX8lnOhmjEkcDNXrRmug33GQ/viewform?embedded=true"
-            width="760" height="1100" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
-    </div>
-
-    <footer class="footer shadow-sm mt-4">
+    <footer id="footer" class="footer shadow-sm mt-4">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12 col-md-6 footer-contact">
                     <h2>Contacto directo</h2>
                     <br>
-                    <a href="mailto:santiagoemp01@gmail.com"><i class="icon-mail"> </i>team@ingenierosab.com</a>
+                    <a href="mailto:ingenierosabsas@gmail.com"><i class="icon-mail"> </i>ingenierosabsas@gmail.com</a>
                     <br>
-                    <a href="https://wa.me/573508108761" target="_blank"><i class="icon-whatsapp"> </i>+57 310
-                        123000</a>
+                    <a href="https://wa.me/573102818115" target="_blank"><i class="icon-whatsapp"> </i>+57 310
+                        2818115</a>
                     <br>
-                    <a href="tel:+573508108761"><i class="icon-phone"> </i>+57 310
-                        123000</a>
+                    <a href="tel:+573102818115"><i class="icon-phone"> </i>+57 310
+                        2818115</a>
                 </div>
                 <div class="col-12 col-md-6 footer-social">
                     <h2>Conoce más sobre nosotros</h2>
                     <br>
-                    <a href="facebook.com/ingenierosab" target="_blank"><i class="icon-facebook">
+                    <a href="https://www.facebook.com/ingenierosab" target="_blank"><i class="icon-facebook">
                         </i>facebook.com/ingenierosab</a>
                     <br>
-                    <a href="instagram.com/ingenierosab" target="_blank"><i class="icon-instagram">
+                    <a href="https://www.instagram.com/ingenierosab" target="_blank"><i class="icon-instagram">
                         </i>instagram.com/ingenierosab</a>
                     <br>
-                    <a href="twitter.com/ingenierosab" target="_blank"><i class="icon-twitter">
+                    <a href="https://www.twitter.com/ingenierosab" target="_blank"><i class="icon-twitter">
                         </i>twitter.com/ingenierosab </a>
                 </div>
             </div>
         </div>
     </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="contact" tabindex="-1" role="dialog" aria-labelledby="modalConactTitle"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" aria-label="Close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <iframe
+                        data-src="https://docs.google.com/forms/d/e/1FAIpQLSes1MJ_SkP1xrAdW0pBjSpguHzX8lnOhmjEkcDNXrRmug33GQ/viewform?embedded=true"
+                        frameborder="0" marginheight="0" marginwidth="0" class="w-100 lozad"
+                        style="height: 55vh;">Cargando…</iframe>
+                </div>
+                <div class="modal-footer">
+                    <p class="lead text-center">Para ver nuestros datos de contacto y medios de difusión, da
+                        <a href="https://www.ingenierosab.com/index.html#footer">click aquí</a> y pulsa sobre la "x"</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <!-- /SECCION DE CONTACTO -->
+
+    <!-- LOZAD -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+    <script>
+        const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+        observer.observe();
+    </script>
+    <!-- /LOZAD -->
 
     <script src="./scripts/index.js"></script>
 
