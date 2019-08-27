@@ -87,6 +87,59 @@ body::-webkit-scrollbar-thumb:hover {
 
 /* /ICONOS */
 
+/* REDES SOCIALES */
+
+.redes-sociales {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.redes-sociales a {
+    display: block;
+    width: 60px;
+    height: 60px;
+    background: #000;
+    color: #fff;
+    margin: 0 10px;
+    text-align: center;
+    border-radius: 100px;
+    transition: .3s ease all;
+}
+
+.redes-sociales .twitter {
+    background: #1da1f2;
+}
+
+.redes-sociales .facebook {
+    background: #3b5998;
+}
+
+.redes-sociales .instagram {
+    background: #c13584;
+}
+
+.redes-sociales a i {
+    font-size: 20px;
+    line-height: 60px;
+}
+
+.contenedor-icono:hover a {
+    animation: icono .5s ease;
+}
+
+@keyframes icono {
+    from {
+        transform: rotate3d(0, 0, 0, 0);
+    }
+    to {
+        transform: rotate3d(0, 1, 0, 360deg);
+    }
+}
+
+/* /REDES SOCIALES */
+
 /* ICONOS SERVICIOS */
 
 @font-face {
@@ -418,4 +471,96 @@ footer a {
 footer a:hover {
     text-decoration: none;
     color: inherit;
+}
+
+/* GALERIA IMAGENES */
+
+#header-galeria {
+    padding: 20px 0;
+}
+
+#header-galeria .logo {
+    text-align: center;
+}
+
+#header-galeria .logo p {
+    color: #9B9B9B;
+}
+
+.grid {
+    position: relative;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s linear 1s;
+}
+
+.grid.imagenes-cargadas {
+    opacity: 1;
+}
+
+.grid .item {
+    position: absolute;
+    display: block;
+    padding: 0;
+    margin: 10px;
+    width: calc(33.333333% - 20px);
+}
+
+.grid .item-contenido {
+    position: relative;
+}
+
+.grid .item img {
+    width: 100%;
+    cursor: pointer;
+    vertical-align: top;
+    border-radius: 10px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, .9);
+    width: 100%;
+    height: 100vh;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.overlay.activo {
+    display: flex;
+}
+
+.overlay img {
+    max-width: 60vw;
+    max-height: 60vh;
+    border-radius: 5px;
+}
+
+.container-img {
+    position: relative;
+}
+
+.overlay #btn-cerrar-popup {
+    background: none;
+    font-size: 30px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: -30px;
+    top: -30px;
+}
+
+
+@media screen and (max-width: 700px) {
+    .grid .item {
+        width: calc(50% - 20px);
+    }
 }
