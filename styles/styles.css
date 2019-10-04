@@ -140,6 +140,17 @@ body::-webkit-scrollbar-thumb:hover {
 
 /* /REDES SOCIALES */
 
+#broshure-back {
+    -moz-transform: skew(-14deg, 0deg);
+    -webkit-transform: skew(-14deg, 0deg);
+    -o-transform: skew(-14deg, 0deg);
+    -ms-transform: skew(-14deg, 0deg);
+    transform: skew(-14deg, 0deg);
+    background-image: url('../assets/brand/broshure-back.JPG');
+    height: 70vh;
+    /* background: radial-gradient(circle at center) */
+}
+
 /* ICONOS SERVICIOS */
 
 @font-face {
