@@ -141,14 +141,29 @@ body::-webkit-scrollbar-thumb:hover {
 /* /REDES SOCIALES */
 
 #broshure-back {
-    -moz-transform: skew(-14deg, 0deg);
-    -webkit-transform: skew(-14deg, 0deg);
-    -o-transform: skew(-14deg, 0deg);
-    -ms-transform: skew(-14deg, 0deg);
-    transform: skew(-14deg, 0deg);
-    background-image: url('../assets/brand/broshure-back.JPG');
-    height: 70vh;
-    /* background: radial-gradient(circle at center) */
+    -moz-transform: skew(-10deg, 0deg);
+    -webkit-transform: skew(-10deg, 0deg);
+    -o-transform: skew(-10deg, 0deg);
+    -ms-transform: skew(-10deg, 0deg);
+    transform: skew(-10deg, 0deg);
+}
+
+#broshure {
+    margin-bottom: 25px;
+}
+
+#broshure > div > div {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#broshure h1 {
+    font-size: 40px;
+    font-weight: 300;
+}
+
+#broshure button {
+    width: 50%;
 }
 
 /* ICONOS SERVICIOS */
@@ -569,9 +584,18 @@ footer a:hover {
     top: -30px;
 }
 
-
 @media screen and (max-width: 700px) {
     .grid .item {
         width: calc(50% - 20px);
     }
+    #broshure h1 {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    #broshure-back {
+        transform: none;
+    }
+    
 }
