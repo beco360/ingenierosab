@@ -1,12 +1,12 @@
 ---
 type: deployment
-status: dns-pending
+status: deployed
 date: 2026-10-22
 ---
 
 # Publicación en Cloudflare Pages
 
-Cloudflare Pages sirve la web estática desde el repositorio de GitHub. No requiere Docker, Functions ni base de datos. El dominio final es `ingenierosab.com`; la compra y renovación del dominio se gestionan por separado.
+Cloudflare Pages sirve la web estática desde el repositorio de GitHub. No requiere Docker, Functions ni base de datos. El dominio de producción [ingenierosab.com](https://ingenierosab.com/) está activo y verificado por HTTPS; la compra y renovación del dominio se gestionan por separado en Hostinger.
 
 ## Repositorio conectado
 
@@ -26,11 +26,11 @@ El comando genera las tres páginas y copia únicamente los archivos públicos n
 
 ## Estado del dominio al 2026-10-22
 
-La zona `ingenierosab.com` está creada en el plan Free. Cloudflare le asignó `algin.ns.cloudflare.com` y `novalee.ns.cloudflare.com`. El usuario autorizó explícitamente el cambio y Hostinger confirmó que esos servidores quedaron guardados, sustituyendo a `orbit.dns-parking.com` y `horizon.dns-parking.com`. El resolver `1.1.1.1` ya devuelve ambos servidores de Cloudflare. La propagación y la comprobación de la zona en Cloudflare siguen pendientes; Pages no permite asociar el dominio raíz mientras la zona no esté activa.
+La zona `ingenierosab.com` está activa en el plan Free. Usa `algin.ns.cloudflare.com` y `novalee.ns.cloudflare.com`. El usuario autorizó explícitamente el cambio y Hostinger confirmó que esos servidores quedaron guardados, sustituyendo a `orbit.dns-parking.com` y `horizon.dns-parking.com`. El dominio raíz quedó asociado a Pages mediante CNAME `@` hacia `ingenierosab.pages.dev`, sustituyendo el registro A de estacionamiento. El servidor autoritativo y el resolver `1.1.1.1` ya devolvieron las direcciones de Cloudflare; el acceso final se comprobó mediante resolución DNS normal.
 
-Las consultas públicas previas al cambio de servidores mostraron un registro A en la raíz hacia `2.57.91.91` y `www` como CNAME hacia `ingenierosab.com`. No se observaron registros AAAA, MX, TXT, CAA, DS ni DNSKEY en la raíz; `_dmarc` no existía y no se observó DNSSEC activo. Estas consultas no enumeran todos los subdominios ni describen todavía la resolución final de Pages; preservar los registros de correo, verificaciones u otros servicios existentes durante la migración.
+Las consultas públicas previas al cambio de servidores mostraron un registro A en la raíz hacia `2.57.91.91` y `www` como CNAME hacia `ingenierosab.com`. No se observaron registros AAAA, MX, TXT, CAA, DS ni DNSKEY en la raíz; `_dmarc` no existía y no se observó DNSSEC activo. Es una referencia del estado anterior, no la configuración DNS final. Las consultas no enumeran todos los subdominios; conservar los registros de correo, verificaciones u otros servicios al realizar cambios posteriores.
 
-La siguiente redirección está creada y habilitada en la zona, pero su funcionamiento público sigue pendiente de la activación de DNS y HTTPS:
+La siguiente redirección está creada y habilitada en la zona. Se comprobó públicamente por HTTP y HTTPS, conservando ruta y parámetros:
 
 | Ajuste de la regla | Valor |
 |---|---|
@@ -40,16 +40,24 @@ La siguiente redirección está creada y habilitada en la zona, pero su funciona
 | Código | `301` |
 | Conservar parámetros | `preserve_query_string: true` |
 
-## Pasos pendientes
+## Tareas posteriores
 
-1. Esperar a que Cloudflare confirme la zona activa y añadir `ingenierosab.com` desde Custom domains del proyecto de Pages. La asociación con Pages debe existir antes de apuntar un registro DNS al subdominio `pages.dev`.
-2. Comprobar la resolución DNS y los certificados HTTPS de `ingenierosab.com` y `www.ingenierosab.com`.
-3. Verificar públicamente la redirección 301 de `www` hacia `https://ingenierosab.com`, conservando ruta y parámetros.
-4. Comprobar en el dominio final las páginas, los recursos, las redirecciones históricas y los errores 404. Confirmar ausencia de `noindex`, canonical, datos estructurados y sitemap con las URLs definitivas, además del acceso de rastreadores.
+1. Verificar el dominio en Search Console y enviar `https://ingenierosab.com/sitemap.xml`; ambas acciones siguen pendientes.
+2. Revisar indexación y datos de Core Web Vitals cuando existan visitas y datos suficientes. No hay mediciones de visitantes reales ni puntuación Lighthouse registradas.
+3. Completar una auditoría con lector de pantalla; todavía no se ha realizado ni se certifica conformidad WCAG.
 
 El dominio raíz requiere que Cloudflare administre los DNS. Esto no exige transferir la compra del dominio ni cambiar de registrador; Hostinger conserva la gestión de su registro y renovación.
 
 ## Comprobaciones públicas realizadas
+
+En `https://ingenierosab.com/`, el 2026-10-22, con resolución DNS normal y validación TLS sin excepciones:
+
+- `/`, `/services`, `/about`, robots y sitemap responden 200. No hay `noindex` en etiquetas meta ni cabeceras de las páginas vigentes. Canonical y sitemap usan el dominio final y sus rutas sin extensión; los tres bloques de JSON-LD se interpretan correctamente.
+- `www` por HTTP y HTTPS redirige 301 a la raíz HTTPS. La raíz HTTP también redirige 301 a HTTPS. Se comprobó conservación de `/services?origen=verificacion&servicio=remodelacion` en los tres casos.
+- Las 15 redirecciones históricas responden 301 al destino previsto, incluida la ruta con `ñ`.
+- `/projects.html`, `/proyectos.html` y una ruta inexistente responden 404 reales.
+- Los 15 recursos publicados responden 200 con el tipo de contenido esperado y el mismo hash que el paquete local. Las cabeceras de seguridad están presentes.
+- `https://ingenierosab.pages.dev/` mantiene `X-Robots-Tag: noindex, nofollow`.
 
 En `https://ingenierosab.pages.dev/`, el 2026-10-22:
 
@@ -60,9 +68,9 @@ En `https://ingenierosab.pages.dev/`, el 2026-10-22:
 - El hostname `pages.dev` devuelve `X-Robots-Tag: noindex, nofollow` y las cabeceras de seguridad previstas.
 - El formulario abre en el navegador bajo la CSP publicada; el comparador responde a la flecha del teclado de 50 a 51. El formulario prepara el mensaje y la persona confirma el envío en WhatsApp o correo; no se envió ningún mensaje durante la prueba.
 
-El cliente HTTP `Python-urllib/3.13` recibió 403 mientras el identificador explícito de verificación recibió 200 en la misma URL. Revisar el acceso de rastreadores cuando se active el dominio personalizado. Estas comprobaciones de `pages.dev` no confirman todavía el funcionamiento del dominio final.
+En `pages.dev`, el cliente HTTP `Python-urllib/3.13` recibió 403 mientras el identificador explícito de verificación recibió 200 en la misma URL. En AI Crawl Control > Security, los controles `Block Crawler` aparecen desactivados para Googlebot, Bingbot, ChatGPT-User, OAI-SearchBot, Claude-SearchBot y PerplexityBot, entre los rastreadores listados. No se modificaron esos controles. Esta observación del panel no prueba el acceso real de los bots ni confirma indexación.
 
-Después de comprobar el dominio, verificarlo en Search Console y enviar `https://ingenierosab.com/sitemap.xml`. La configuración no confirma por sí sola indexación o posiciones en buscadores.
+La publicación y la configuración permiten rastreo, pero no confirman por sí solas indexación o posiciones en buscadores.
 
 ## Referencias
 

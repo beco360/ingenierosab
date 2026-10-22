@@ -1,12 +1,12 @@
 ---
 type: validation
-status: reviewed
+status: deployed
 date: 2026-10-22
 ---
 
 # Validación de la propuesta
 
-Revisión local y pública de la versión centrada en remodelación de apartamentos en Bogotá. Este documento registra las comprobaciones de la web, del contenedor y del despliegue en Cloudflare Pages al 2026-10-22. El dominio de producción `ingenierosab.com` todavía no está activo en Pages.
+Revisión local y pública de la versión centrada en remodelación de apartamentos en Bogotá. Este documento registra las comprobaciones de la web, del contenedor y del despliegue en Cloudflare Pages al 2026-10-22. El dominio de producción [ingenierosab.com](https://ingenierosab.com/) está activo y verificado por HTTPS.
 
 El alcance actual tiene tres páginas: portada, catálogo de 14 servicios y empresa con misión, visión, cultura y seis referencias de clientes. Se comprobó la retirada del portafolio en la navegación, la portada, las páginas generadas y el sitemap. La página retirada devuelve 404; las tres páginas vigentes devuelven 200. Sus imágenes ya no están en la vista previa ni en el paquete de producción.
 
@@ -43,13 +43,26 @@ Comprobaciones públicas realizadas el 2026-10-22:
 - Las cabeceras CSP, `X-Content-Type-Options`, `Referrer-Policy` y `Permissions-Policy` están presentes.
 - En el navegador, el formulario abre bajo la CSP publicada y el comparador responde a la flecha del teclado, pasando de 50 a 51. No se envió ningún mensaje.
 
-Se observó una diferencia por cliente HTTP: Cloudflare devuelve 403 al identificador `Python-urllib/3.13` y 200 al identificador explícito de verificación en la misma URL. No se atribuye este comportamiento al código del sitio; queda pendiente revisar el acceso de rastreadores al activar el dominio personalizado.
+En `pages.dev` se observó una diferencia por cliente HTTP: Cloudflare devuelve 403 al identificador `Python-urllib/3.13` y 200 al identificador explícito de verificación en la misma URL. No se atribuye este comportamiento al código del sitio.
 
-La zona `ingenierosab.com` está creada en el plan Free con los servidores asignados `algin.ns.cloudflare.com` y `novalee.ns.cloudflare.com`. El usuario autorizó explícitamente el cambio y Hostinger confirmó que los servidores de nombres se guardaron; el resolver `1.1.1.1` ya devuelve ambos servidores de Cloudflare. La propagación y la comprobación de la zona en Cloudflare siguen pendientes. Pages no permite asociar el dominio raíz hasta que la zona esté activa. La regla de redirección de `www` está habilitada en la zona, pero todavía no se ha verificado públicamente. Faltan la activación de la zona, la asociación del dominio y las comprobaciones de HTTPS e indexabilidad del dominio final.
+En el panel AI Crawl Control > Security de la zona, los controles `Block Crawler` aparecen desactivados para Googlebot, Bingbot, ChatGPT-User, OAI-SearchBot, Claude-SearchBot y PerplexityBot, entre los rastreadores listados. Se comprobó la configuración sin modificar esos controles; no constituye una prueba de acceso realizada por esos bots ni confirma indexación.
+
+## Dominio de producción verificado
+
+La zona `ingenierosab.com` está activa en el plan Free con `algin.ns.cloudflare.com` y `novalee.ns.cloudflare.com`. El usuario autorizó explícitamente el cambio y Hostinger confirmó que los servidores de nombres se guardaron. El dominio raíz quedó asociado al proyecto de Pages mediante CNAME hacia `ingenierosab.pages.dev`, sustituyendo el registro A de estacionamiento. La regla de redirección de `www` está habilitada y comprobada públicamente.
+
+Las comprobaciones finales del 2026-10-22 usaron la resolución DNS normal y la validación TLS del cliente, sin forzar IP ni omitir comprobaciones de certificados:
+
+- `https://ingenierosab.com/`, `/services`, `/about`, `/robots.txt` y `/sitemap.xml` responden 200.
+- Las tres páginas no contienen `noindex` en etiquetas meta ni en cabeceras. Canonical, sitemap y JSON-LD usan el dominio final; los tres bloques de JSON-LD se interpretan correctamente.
+- Tanto `http://www.ingenierosab.com/services?origen=verificacion&servicio=remodelacion` como su variante HTTPS responden 301 hacia `https://ingenierosab.com/services?origen=verificacion&servicio=remodelacion`. La raíz por HTTP también redirige 301 a HTTPS conservando ruta y parámetros.
+- Las 15 redirecciones históricas responden 301 al destino previsto, incluida la ruta con `ñ`; las dos rutas de proyectos retirados y una ruta inexistente responden 404 reales.
+- Los 15 recursos publicados responden 200 con el tipo correcto y el mismo hash que el paquete local. Las cabeceras de seguridad están presentes.
+- `https://ingenierosab.pages.dev/` sigue respondiendo 200 con `X-Robots-Tag: noindex, nofollow`.
 
 ## Límites de esta revisión
 
-No se ejecutó una auditoría completa con lector de pantalla ni se certifica conformidad WCAG. No hay puntuación Lighthouse ni datos de Core Web Vitals en visitantes reales. La indexación y la visibilidad en buscadores o respuestas de IA se verifican después de publicar; no se prometen posiciones.
+No se ejecutó una auditoría completa con lector de pantalla ni se certifica conformidad WCAG. No hay puntuación Lighthouse ni datos de Core Web Vitals en visitantes reales. Search Console todavía no se ha configurado ni se ha enviado el sitemap desde ese servicio. La indexación y la visibilidad en buscadores o respuestas de IA no están verificadas; no se prometen posiciones.
 
 Se implementaron estructura semántica, contraste, foco visible, controles etiquetados, movimiento reducido, contenido descriptivo, datos de empresa consistentes, metadatos y sitemap. Google indica que sus funciones de IA se apoyan en los fundamentos de SEO existentes; no requieren un archivo especial de IA.
 
@@ -57,4 +70,4 @@ Referencias: [Google: funciones de IA](https://developers.google.com/search/docs
 
 ## Vista previa y producción
 
-Los archivos de la raíz y GitHub Pages conservan `noindex` como vista previa. El paquete `--production --cloudflare` ya está desplegado en Cloudflare Pages con rutas sin extensión y reglas propias de cabeceras y redirecciones. Publicar `ingenierosab.com` todavía requiere activar sus DNS y asociar el dominio; el estado y los pasos pendientes están en `deploy/CLOUDFLARE.md`. La alternativa con Docker permanece en `deploy/HOMELAB.md`. Esta revisión confirma el despliegue en `pages.dev`, no la activación del dominio final. El repositorio no configura un dominio personalizado de GitHub Pages mediante `CNAME`.
+Los archivos de la raíz y GitHub Pages conservan `noindex` como vista previa. El paquete `--production --cloudflare` está desplegado en Cloudflare Pages con rutas sin extensión y reglas propias de cabeceras y redirecciones. `ingenierosab.com` está activo, sirve HTTPS y permite indexación; `pages.dev` conserva el bloqueo de indexación. La configuración y las tareas posteriores están en `deploy/CLOUDFLARE.md`. La alternativa con Docker permanece en `deploy/HOMELAB.md`. El repositorio no configura un dominio personalizado de GitHub Pages mediante `CNAME`.
