@@ -1,0 +1,170 @@
+{
+  "groups": [
+    {
+      "id": "remodeling-finishes",
+      "title": "Remodelación y acabados",
+      "intro": "Renueva tu apartamento en Bogotá o consulta por adecuaciones y acabados para otros espacios. Definimos los trabajos según lo que necesitas transformar.",
+      "services": [
+        {
+          "id": "remodeling",
+          "title": "Remodelaciones y adecuaciones",
+          "description": "Transformamos espacios a partir de tus ideas, necesidades y presupuesto. Puedes plantear la renovación de tu apartamento o consultar por la adecuación de otro inmueble.",
+          "scope": [
+            "Remodelación de apartamentos",
+            "Remodelaciones en general",
+            "Adecuación de espacios",
+            "Alcance según necesidades y presupuesto"
+          ]
+        },
+        {
+          "id": "floors-tiles",
+          "title": "Enchapes, pisos laminados y en madera",
+          "description": "Instalamos pisos y enchapes, considerando la adecuación de la superficie y el acabado que quieres para cada ambiente.",
+          "scope": [
+            "Instalación de enchapes",
+            "Pisos laminados",
+            "Pisos en madera",
+            "Adecuación para la instalación"
+          ]
+        },
+        {
+          "id": "plaster-paint",
+          "title": "Estuco y pintura",
+          "description": "Renovamos las superficies de tus espacios con trabajos de estuco y pintura. Definimos contigo los acabados que darán forma al resultado.",
+          "scope": [
+            "Aplicación de estuco",
+            "Trabajos de pintura",
+            "Renovación de acabados"
+          ]
+        },
+        {
+          "id": "drywall-superboard",
+          "title": "Drywall y Superboard",
+          "description": "Realizamos instalaciones y adecuaciones en drywall y Superboard para dar forma a la distribución y los acabados de tus espacios.",
+          "scope": [
+            "Instalación de drywall",
+            "Instalación de Superboard",
+            "Adecuaciones interiores",
+            "Distribución de espacios"
+          ]
+        },
+        {
+          "id": "windows-glass",
+          "title": "Ventanería en aluminio y divisiones de vidrio",
+          "description": "Diseñamos ventanas y divisiones según las medidas, el uso y la apariencia que buscas para tu espacio.",
+          "scope": [
+            "Ventanería en aluminio",
+            "Divisiones de vidrio",
+            "Diseño a medida"
+          ]
+        },
+        {
+          "id": "roofing",
+          "title": "Cubiertas y techumbres",
+          "description": "Construimos cubiertas y techumbres para proteger espacios interiores. Revisamos las necesidades del inmueble o del espacio que quieres cubrir.",
+          "scope": [
+            "Construcción de cubiertas",
+            "Techumbres",
+            "Cubiertas para inmuebles y espacios de eventos"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "design-management",
+      "title": "Diseño y gestión del proyecto",
+      "intro": "Organiza tu proyecto antes de construir: desde las ideas y los planos hasta el presupuesto, la programación y el acompañamiento en trámites.",
+      "services": [
+        {
+          "id": "design-plans",
+          "title": "Diseños y planimetría",
+          "description": "Desarrollamos diseños y planos a partir de tus ideas para proyectos de vivienda, comercio y otros usos. Los entregables se acuerdan según las necesidades y la escala del proyecto.",
+          "scope": [
+            "Vivienda unifamiliar y bifamiliar",
+            "Bodegas",
+            "Locales comerciales",
+            "Diseños urbanos",
+            "Proyectos de pequeña, mediana y gran escala"
+          ]
+        },
+        {
+          "id": "budgets-scheduling",
+          "title": "Costos, presupuestos y programación de obra",
+          "description": "Preparamos presupuestos y programas de obra para organizar la ejecución de tu proyecto, con un alcance definido antes de empezar.",
+          "scope": [
+            "Costos del proyecto",
+            "Presupuestos de obra",
+            "Programación de la ejecución"
+          ]
+        },
+        {
+          "id": "project-restructuring",
+          "title": "Reestructuración de proyectos",
+          "description": "Si ya tienes una idea o un proyecto, revisamos cómo ajustarlo y desarrollarlo según tus requerimientos y las metas que quieres alcanzar.",
+          "scope": [
+            "Revisión de ideas y proyectos existentes",
+            "Ajustes según requerimientos",
+            "Desarrollo de propuestas de vivienda"
+          ]
+        },
+        {
+          "id": "regulatory-support",
+          "title": "Acompañamiento normativo y supervisión",
+          "description": "Ofrecemos acompañamiento en trámites relacionados con la construcción y en la supervisión de la ejecución de obras. Revisamos los procesos que requiere cada proyecto.",
+          "scope": [
+            "Acompañamiento en licencias de construcción",
+            "Acompañamiento en licencias ambientales",
+            "Supervisión de ejecución de obras"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "studies-construction",
+      "title": "Estudios y ejecución de obra",
+      "intro": "Consulta por trabajos de preparación, estudios y construcción para proyectos que requieren una intervención más allá de los acabados.",
+      "services": [
+        {
+          "id": "concrete-testing",
+          "title": "Estudio y pruebas de resistencia de concretos",
+          "description": "Realizamos estudios y pruebas de resistencia de concretos como parte de la revisión del material para la obra. El alcance se define según las necesidades del proyecto.",
+          "scope": [
+            "Estudio de concretos",
+            "Pruebas de resistencia"
+          ]
+        },
+        {
+          "id": "topographic-surveys",
+          "title": "Levantamiento topográfico",
+          "description": "Levantamientos topográficos como apoyo para la planeación del proyecto. Consulta el alcance según el terreno y la información que necesitas.",
+          "scope": [
+            "Levantamientos topográficos",
+            "Información para la planeación del proyecto"
+          ]
+        },
+        {
+          "id": "site-preparation",
+          "title": "Preliminares de obra",
+          "description": "Preparamos el predio para el inicio de los trabajos, definiendo las actividades preliminares que requiere la ejecución de la obra.",
+          "scope": [
+            "Adecuación del predio",
+            "Limpieza del terreno",
+            "Cerramiento",
+            "Definición de actividades preliminares"
+          ]
+        },
+        {
+          "id": "roads-buildings",
+          "title": "Ejecución, vías y obra vertical",
+          "description": "Ejecutamos proyectos de construcción de distintas escalas, incluyendo vías y edificaciones. El trabajo parte de definir las características y el alcance de cada obra.",
+          "scope": [
+            "Ejecución de proyectos de construcción",
+            "Vías",
+            "Edificaciones y obra vertical",
+            "Proyectos de pequeña, mediana y gran escala"
+          ]
+        }
+      ]
+    }
+  ]
+}

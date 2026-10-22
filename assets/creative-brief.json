@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-22",
+  "provider": "Higgsfield",
+  "model": "gpt_image_2_5",
+  "status": "completed",
+  "direction": "Achievable apartment remodeling in Bogota. Warm natural materials, plaster, ceramic tile and wood flooring, standard-height residential spaces. Conceptual images, never presented as completed company projects.",
+  "selected_assets": [
+    {"name": "apartment-renovated", "job_id": "6f96d3a0-e615-4cd1-ac10-fc4e91e3b062", "source": "apartment-source.png", "outputs": ["hero-640.webp", "hero-896.webp"]},
+    {"name": "apartment-before", "job_id": "f509a463-9733-4a69-a594-98e0d703d77c", "source": "before-source.png", "outputs": ["before-640.webp", "before-896.webp"]}
+  ],
+  "historical_image_references": [
+    "https://raw.githubusercontent.com/beco360/ingenierosab/2eb241a4496fee0b691fb2c0cbc07c7926ecf6a9/servicios/remodelaciones/12.jpg",
+    "https://raw.githubusercontent.com/beco360/ingenierosab/2eb241a4496fee0b691fb2c0cbc07c7926ecf6a9/servicios/Enchapes%2C%20Pisos%20Laminados%20y%20en%20madera/2.jpg"
+  ],
+  "reference_usage": "Historical images informed realistic plaster preparation and ceramic floor materials in the before concept; storefronts and locations were not reproduced."
+}

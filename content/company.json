@@ -1,0 +1,45 @@
+{
+  "intro": "Ingenieros AB reúne diseño, construcción, remodelación y supervisión de obras en Bogotá, Colombia. La renovación de apartamentos es una parte central de nuestro trabajo, dentro de una trayectoria de servicios para vivienda, espacios comerciales y obras civiles de carácter público y privado.",
+  "mission": "Acompañar a cada cliente con responsabilidad, desde la definición del proyecto hasta su ejecución y entrega. Diseñamos, construimos y supervisamos con atención a la calidad, el cumplimiento del alcance acordado y las relaciones de largo plazo.",
+  "vision": "Seguir creciendo en el sector de la construcción y las obras civiles, mejorar nuestros procesos y fortalecer una manera de trabajar basada en la calidad, el cumplimiento y la confianza.",
+  "values": [
+    {
+      "title": "Responsabilidad en cada etapa",
+      "description": "Entender el encargo, definir los compromisos y acompañar las decisiones de diseño, construcción y supervisión."
+    },
+    {
+      "title": "Calidad y cumplimiento",
+      "description": "Cuidar los materiales, la ejecución y la revisión de los trabajos frente al alcance del proyecto y la normativa aplicable."
+    },
+    {
+      "title": "Relaciones que continúan",
+      "description": "Escuchar al cliente y mantener una comunicación clara para construir confianza más allá de una entrega."
+    }
+  ],
+  "clients": [
+    {
+      "name": "Claro",
+      "image": "assets/client-claro.webp"
+    },
+    {
+      "name": "Cencosud",
+      "image": "assets/client-cencosud.webp"
+    },
+    {
+      "name": "Acueducto",
+      "image": "assets/client-acueducto.webp"
+    },
+    {
+      "name": "Inamsilco",
+      "image": "assets/client-inamsilco.webp"
+    },
+    {
+      "name": "Olímpica",
+      "image": "assets/client-olimpica.webp"
+    },
+    {
+      "name": "Jumbo",
+      "image": "assets/client-jumbo.webp"
+    }
+  ]
+}
