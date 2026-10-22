@@ -42,7 +42,7 @@ Este comando actualiza `services.html`, `about.html`, las opciones del formulari
 
 ## Imágenes
 
-`assets/creative-brief.json` registra las generaciones y sus referencias. Las imágenes seleccionadas y sus originales PNG están incluidos. `scripts/prepare-assets.cjs` regenera las variantes y la portada social; `scripts/prepare-archive.cjs` optimiza los seis logotipos originales de `assets/source/clients/`. Ambos requieren Sharp solo para regenerar imágenes.
+`assets/creative-brief.json` registra las generaciones y sus referencias. Las imágenes seleccionadas y sus originales PNG están incluidos. `scripts/prepare-assets.cjs` regenera las variantes y la portada social. `content/client-logos.json` registra las fuentes de los logotipos; `scripts/prepare-archive.cjs` genera sus PNG en `assets/source/clients/` y las versiones WebP de la web a partir de `assets/source/clients/originals/`. Ambos scripts requieren Sharp solo para regenerar imágenes. Las fuentes vectoriales se rasterizan con mayor resolución; las imágenes de mapa de bits no se amplían artificialmente.
 
 El sitio anterior se conserva en el [historial del repositorio](https://github.com/beco360/ingenierosab/tree/2eb241a4496fee0b691fb2c0cbc07c7926ecf6a9).
 

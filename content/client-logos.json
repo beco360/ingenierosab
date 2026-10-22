@@ -1,0 +1,48 @@
+{
+  "retrievedAt": "2026-10-22",
+  "usage": "Brand identification in the historical client references section. The marks belong to their respective owners.",
+  "logos": [
+    {
+      "id": "claro",
+      "source": "clients/originals/claro.png",
+      "page": "https://www.claro.com.co/",
+      "url": "https://www.claro.com.co/portal/co/recursos_contenido/1644860549715-logo-claro.png",
+      "note": "Official transparent circular mark matching the previous site. Original 467 x 471 PNG; only exterior padding is trimmed."
+    },
+    {
+      "id": "cencosud",
+      "source": "clients/originals/cencosud.svg",
+      "page": "https://commons.wikimedia.org/wiki/File:Cencosud_logo.svg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Cencosud_logo.svg",
+      "note": "Color vector attributed to Cencosud S.A. on Wikimedia Commons, based on cencosud.com. The official current homepage supplies a white variant unsuitable for these light cards."
+    },
+    {
+      "id": "acueducto",
+      "source": "clients/originals/acueducto.png",
+      "page": "https://seeklogo.com/vector-logo/3027/acueducto",
+      "url": "https://images.seeklogo.com/logo-png/0/1/acueducto-logo-png_seeklogo-3027.png",
+      "note": "600 x 600 PNG of the EAAB horizontal mark. Exterior white padding is trimmed; the website blends the remaining white background into the card. Chosen over the official geoportal's less crisp embossed version."
+    },
+    {
+      "id": "inamsilco",
+      "source": "clients/originals/inamsilco.png",
+      "page": "https://github.com/beco360/ingenierosab/tree/2eb241a4496fee0b691fb2c0cbc07c7926ecf6a9/clientes",
+      "url": "https://raw.githubusercontent.com/beco360/ingenierosab/2eb241a4496fee0b691fb2c0cbc07c7926ecf6a9/clientes/inamsilco.png",
+      "note": "Retained the original 179 x 178 symbol. The 500 x 132 official horizontal PNG at https://inamsilco.com/sitio/sites/default/files/ins.png does not add symbol detail. No artificial enlargement or logo reconstruction."
+    },
+    {
+      "id": "olimpica",
+      "source": "clients/originals/olimpica.svg",
+      "page": "https://www.olimpica.com/",
+      "url": "https://olimpica.vtexassets.com/assets/vtex/assets-builder/olimpica.theme/8.0.49/images/footer/logo-olimpica-footer___48c7c65972008764089c7627f77372e6.svg",
+      "note": "Official vector with the blue/red brand panel and white border preserved."
+    },
+    {
+      "id": "jumbo",
+      "source": "clients/originals/jumbo.svg",
+      "page": "https://www.jumbocolombia.com/",
+      "url": "https://co-jumbo-cms.ecomm.cencosud.com/cms/co/jumbo-web-co/view_version/69e945ed4f31a000a5fe61de/32024af0-a940-495c-9da9-3001c2c03622.svg",
+      "note": "Official green wordmark served in the Colombian website header."
+    }
+  ]
+}
