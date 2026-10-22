@@ -48,6 +48,16 @@ El sitio anterior se conserva en el [historial del repositorio](https://github.c
 
 ## Paquete de producción
 
+La publicación prevista utiliza Cloudflare Pages conectado a GitHub:
+
+```powershell
+node scripts/package.mjs --production --cloudflare
+```
+
+En Pages, seleccionar `master` como rama de producción, el comando anterior como compilación y `dist` como directorio de salida. Esta variante incluye cabeceras y redirecciones propias de Pages y adapta las rutas a `/services` y `/about`. Ver [la guía de Cloudflare](deploy/CLOUDFLARE.md) para conectar el dominio y verificar la publicación.
+
+La alternativa para un servidor propio conserva Docker:
+
 ```powershell
 node scripts/package.mjs --production
 docker compose build
@@ -58,4 +68,4 @@ El empaquetador reconstruye `dist` con una lista explícita de archivos, sin fue
 
 Compose expone el sitio en `http://127.0.0.1:8088`. El contenedor aporta compresión, caché, cabeceras de seguridad y redirecciones 301 de las rutas antiguas de cultura y servicios. Estas funciones de Nginx no se aplican a GitHub Pages.
 
-Ver [las instrucciones de alojamiento](deploy/HOMELAB.md) y [la validación realizada](VALIDATION.md).
+Ver [la alternativa de alojamiento propio](deploy/HOMELAB.md) y [la validación realizada](VALIDATION.md).

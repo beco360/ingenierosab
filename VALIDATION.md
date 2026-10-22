@@ -27,6 +27,10 @@ El alcance actual tiene tres páginas: portada, catálogo de 14 servicios y empr
 - En el contenedor: HTML con caché de revalidación, imágenes con caché de siete días, CSS comprimido con gzip y cabeceras de seguridad presentes. La configuración de Nginx no se aplica a GitHub Pages.
 - Paquete de producción sin el bloqueo de indexación ni la nota de propuesta. Mantiene las aclaraciones de imágenes conceptuales generadas con IA.
 
+## Preparación para Cloudflare Pages
+
+El paquete de Pages se comprobó localmente con Wrangler 4.152.0: las tres páginas responden 200, las 15 redirecciones históricas funcionan (incluida la ruta con `ñ`), las rutas retiradas y desconocidas responden 404 y las cabeceras de seguridad están presentes. Se verificaron las redirecciones automáticas de `.html`, los metadatos con rutas sin extensión y las reglas de `noindex` para los dos formatos de hostname `pages.dev`; la regla no se aplica al dominio final. Estas pruebas locales no sustituyen la comprobación del despliegue público y de HTTPS cuando se conecte la cuenta.
+
 ## Límites de esta revisión
 
 No se ejecutó una auditoría completa con lector de pantalla ni se certifica conformidad WCAG. No hay puntuación Lighthouse ni datos de Core Web Vitals en visitantes reales. La indexación y la visibilidad en buscadores o respuestas de IA se verifican después de publicar; no se prometen posiciones.
@@ -37,4 +41,4 @@ Referencias: [Google: funciones de IA](https://developers.google.com/search/docs
 
 ## Vista previa y producción
 
-Los archivos de la raíz y GitHub Pages conservan `noindex` como vista previa. El paquete `--production` queda preparado para `ingenierosab.com`; publicar el dominio requiere configurar por separado el túnel o proxy y DNS. Las instrucciones genéricas están en `deploy/HOMELAB.md`. El repositorio no configura un dominio personalizado de GitHub Pages mediante `CNAME`.
+Los archivos de la raíz y GitHub Pages conservan `noindex` como vista previa. El paquete `--production --cloudflare` prepara la publicación en Cloudflare Pages con rutas sin extensión y reglas propias de cabeceras y redirecciones. Publicar `ingenierosab.com` requiere conectar el repositorio, asociar el dominio y configurar sus DNS; los pasos están en `deploy/CLOUDFLARE.md`. La alternativa con Docker permanece en `deploy/HOMELAB.md`. Este documento no confirma un despliegue en Cloudflare ni la conexión del dominio. El repositorio no configura un dominio personalizado de GitHub Pages mediante `CNAME`.
