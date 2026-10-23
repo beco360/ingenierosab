@@ -112,7 +112,6 @@ function setMotion(paused) {
   page.classList.toggle('motion-paused', paused);
   motionButton.setAttribute('aria-pressed', String(paused));
   motionButton.setAttribute('aria-label', paused ? 'Activar movimiento de la ilustración' : 'Pausar movimiento de la ilustración');
-  motionButton.textContent = paused ? '▷' : 'Ⅱ';
 }
 if (motionButton) {
   setMotion(motionPreference.matches);

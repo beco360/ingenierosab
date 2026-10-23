@@ -13,7 +13,8 @@
     .eyebrow { font-size: .75rem; letter-spacing: .15em; }
     h1 { font-size: clamp(2.75rem, 8vw, 6rem); line-height: 1.05; font-weight: 400; letter-spacing: -.04em; }
     p { max-width: 35rem; }
-    a { display: inline-block; margin-top: 1.5rem; padding: .9rem 1.5rem; background: #222722; color: #fff; text-decoration: none; }
+    a { display: inline-flex; align-items: center; gap: 1rem; margin-top: 1.5rem; padding: .9rem 1.5rem; background: #222722; color: #fff; text-decoration: none; }
+    .icon { width: 20px; height: 20px; flex: none; }
     a:hover { background: #414a40; }
     a:focus-visible { outline: 3px solid #805c2d; outline-offset: 5px; }
   </style>
@@ -23,7 +24,7 @@
     <p class="eyebrow">INGENIEROS AB / 404</p>
     <h1>Esta página<br>no está aquí.</h1>
     <p>Vuelve al inicio para conocer nuestros servicios y contarnos sobre tu proyecto.</p>
-    <a href="https://beco360.github.io/ingenierosab/">Volver al inicio ↗</a>
+    <a href="https://beco360.github.io/ingenierosab/">Volver al inicio <svg class="icon icon-arrow-up-right" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
   </main>
 </body>
 </html>

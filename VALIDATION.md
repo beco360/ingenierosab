@@ -17,6 +17,8 @@ El alcance actual tiene tres páginas: portada, catálogo de 14 servicios y empr
 - Sintaxis de JavaScript y preparación del paquete de producción correctas.
 - HTML con un solo H1, IDs únicos, enlaces internos válidos, archivos referenciados presentes y JSON-LD que se puede interpretar.
 - Revisión visual en escritorio y ventanas de 320 y 390 píxeles de ancho.
+- Iconos de interfaz convertidos a SVG con dimensiones explícitas, `currentColor` y exclusión del árbol accesible; no quedan flechas ni símbolos de control Unicode en las cuatro páginas. Se comprobaron menú, cierre del formulario con retorno de foco y acordeón a 390 píxeles. No se realizó una prueba en Safari de iPhone físico.
+- El único teléfono y destino de WhatsApp publicado es `+57 310 291 8515`, también en los datos estructurados y el borrador del formulario.
 - Corrección posterior de FAQ: cuadrícula de dos columnas y respuestas alineadas; comprobadas abiertas y cerradas en escritorio y a 320/390 píxeles, incluido cierre por teclado.
 - Menú móvil y diálogo: Escape cierra y devuelve el foco al control que los abrió.
 - Comparador: teclado, extremos 0/100 y etiquetas coherentes con la imagen visible.

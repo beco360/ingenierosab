@@ -110,6 +110,15 @@ img {
   height: auto;
 }
 
+.icon {
+  display: inline-block;
+  flex: none;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  pointer-events: none;
+}
+
 figure,
 h1,
 h2,
@@ -282,19 +291,22 @@ button {
   font-size: 11px;
 }
 
-.menu-toggle span {
-  width: 20px;
-  height: 1px;
-  background: var(--ink);
+.menu-toggle .icon {
+  width: 24px;
+  height: 24px;
+}
+
+.menu-toggle path {
   transition: transform 200ms;
+  transform-origin: 12px 12px;
 }
 
-.menu-toggle[aria-expanded="true"] span:first-child {
-  transform: translateY(3px) rotate(45deg);
+.menu-toggle[aria-expanded="true"] .menu-line-top {
+  transform: rotate(45deg) translateY(4px);
 }
 
-.menu-toggle[aria-expanded="true"] span:last-child {
-  transform: translateY(-3px) rotate(-45deg);
+.menu-toggle[aria-expanded="true"] .menu-line-bottom {
+  transform: rotate(-45deg) translateY(-4px);
 }
 
 .mobile-nav {
@@ -413,14 +425,11 @@ button {
   transition: color 200ms, background 200ms, border-color 200ms;
 }
 
-.button > span:last-child {
-  display: inline-block;
-  font-size: 18px;
-  line-height: 1;
+.button > .icon {
   transition: transform 200ms var(--ease-out);
 }
 
-.button:hover > span:last-child {
+.button:hover > .icon {
   transform: translate(3px, -3px);
 }
 
@@ -579,6 +588,11 @@ figure.hero-visual {
   background: var(--paper-light);
 }
 
+.motion-toggle[aria-pressed="false"] .icon-play,
+.motion-toggle[aria-pressed="true"] .icon-pause {
+  display: none;
+}
+
 .motion-toggle:focus-visible {
   outline: 3px solid var(--paper-light);
   outline-offset: 3px;
@@ -612,6 +626,7 @@ figure.hero-visual {
 .footer-bottom > a {
   display: inline-flex;
   align-items: center;
+  gap: 8px;
   min-height: 44px;
 }
 
@@ -819,8 +834,6 @@ figure.hero-visual {
 
 .service-toggle {
   justify-self: end;
-  font-size: 22px;
-  font-weight: 300;
   transition: transform 250ms var(--ease-out);
 }
 
@@ -842,6 +855,7 @@ figure.hero-visual {
 .service-link {
   display: inline-flex;
   align-items: center;
+  gap: 8px;
   min-height: 44px;
   margin-top: 10px;
   padding: 6px 0;
@@ -2431,6 +2445,7 @@ label.draft-copy {
  .footer-contact a {
   display: inline-flex;
   align-items: center;
+  gap: 8px;
   min-height: 44px;
   overflow-wrap: anywhere;
  }

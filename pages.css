@@ -34,6 +34,7 @@
 .company-story-link {
   display: inline-flex;
   align-items: center;
+  gap: 8px;
   min-height: 44px;
   padding-block: 8px;
   border-bottom: 1px solid var(--line);
